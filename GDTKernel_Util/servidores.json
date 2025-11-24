@@ -1,0 +1,44 @@
+{
+  "paises": [
+    {
+      "nombre": "MX",
+      "canales": [
+        {
+          "nombre": "EKT",
+          "servidores": [
+            {
+              "nombre": "LOCALHOST",
+              "ip": "0.0.0.0",
+              "total": 70,
+              "totalact": 60,
+              "totaldesac": 10,
+              "usuario": "USUARIO",
+              "password": "PASSWORD",
+              "bd": "BASE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "GU",
+      "canales": [
+        {
+          "nombre": "EKT",
+          "servidores": [
+            {
+              "nombre": "NT0020",
+              "ip": "10.57.111.142",
+              "total": 70,
+              "totalact": 60,
+              "totaldesac": 10,
+              "usuario": "AccesDesarrollo",
+              "password": "AccesDesarrollo",
+              "bd": "ADN"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

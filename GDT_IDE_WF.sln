@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDT_IDE_WF", "GDT_IDE_WF\GDT_IDE_WF.csproj", "{15C242A1-C404-4FD8-9499-F4BD38620B4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDTKernel_Bussiness", "GDTKernel_Bussiness\GDTKernel_Bussiness.csproj", "{EEC171F2-47D8-4AE4-9FAB-49809B7E3F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDTKernel_DataAccess", "GDTKernel_DataAccess\GDTKernel_DataAccess.csproj", "{1C0A94A6-75E9-4CFE-B444-56AF84FB5CDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDTKernel_Semantico", "GDTKernel_Interprete\GDTKernel_Semantico.csproj", "{FD666034-DA85-481D-93D9-FB46F1438FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDTKernel_Util", "GDTKernel_Util\GDTKernel_Util.csproj", "{FB193CCF-D945-4C21-8947-4BF8F62F9B25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDTKernel_Model", "GDTKernel_Model\GDTKernel_Model.csproj", "{3BAD776C-5E20-4DC3-BA34-6B9EB54D4F23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15C242A1-C404-4FD8-9499-F4BD38620B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C242A1-C404-4FD8-9499-F4BD38620B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C242A1-C404-4FD8-9499-F4BD38620B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C242A1-C404-4FD8-9499-F4BD38620B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC171F2-47D8-4AE4-9FAB-49809B7E3F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC171F2-47D8-4AE4-9FAB-49809B7E3F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC171F2-47D8-4AE4-9FAB-49809B7E3F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC171F2-47D8-4AE4-9FAB-49809B7E3F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C0A94A6-75E9-4CFE-B444-56AF84FB5CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0A94A6-75E9-4CFE-B444-56AF84FB5CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0A94A6-75E9-4CFE-B444-56AF84FB5CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0A94A6-75E9-4CFE-B444-56AF84FB5CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD666034-DA85-481D-93D9-FB46F1438FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD666034-DA85-481D-93D9-FB46F1438FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD666034-DA85-481D-93D9-FB46F1438FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD666034-DA85-481D-93D9-FB46F1438FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB193CCF-D945-4C21-8947-4BF8F62F9B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB193CCF-D945-4C21-8947-4BF8F62F9B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB193CCF-D945-4C21-8947-4BF8F62F9B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB193CCF-D945-4C21-8947-4BF8F62F9B25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BAD776C-5E20-4DC3-BA34-6B9EB54D4F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BAD776C-5E20-4DC3-BA34-6B9EB54D4F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BAD776C-5E20-4DC3-BA34-6B9EB54D4F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BAD776C-5E20-4DC3-BA34-6B9EB54D4F23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {684F42F7-AE33-4BE2-9335-86C1DCC87227}
+	EndGlobalSection
+EndGlobal

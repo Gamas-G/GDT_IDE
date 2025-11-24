@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15C242A1-C404-4FD8-9499-F4BD38620B4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GDT_IDE_WF</RootNamespace>
+    <AssemblyName>GDT_IDE_WF</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ADNRedUnica.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutocompleteMenu, Version=1.3.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutocompleteMenu.1.3.5.0\lib\net40\AutocompleteMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <HintPath>..\packages\FCTB.2.16.24\lib\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="GDTKernel_Util">
+      <HintPath>..\GDTKernel_Util\bin\Debug\GDTKernel_Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.2\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.7.0.0\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=7.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.7.0.3\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.CommandLine, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.CommandLine.7.0.0\lib\net462\Microsoft.Extensions.Configuration.CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.EnvironmentVariables.7.0.0\lib\net462\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.FileExtensions.7.0.0\lib\net462\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Json.7.0.0\lib\net462\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.UserSecrets.7.0.0\lib\net462\Microsoft.Extensions.Configuration.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Physical.7.0.0\lib\net462\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileSystemGlobbing.7.0.0\lib\net462\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Hosting.7.0.1\lib\net462\Microsoft.Extensions.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Hosting.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.7.0.0\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Configuration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Configuration.7.0.0\lib\net462\Microsoft.Extensions.Logging.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Console, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Console.7.0.0\lib\net462\Microsoft.Extensions.Logging.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Debug, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Debug.7.0.0\lib\net462\Microsoft.Extensions.Logging.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventLog, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.EventLog.7.0.0\lib\net462\Microsoft.Extensions.Logging.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventSource, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.EventSource.7.0.0\lib\net462\Microsoft.Extensions.Logging.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.7.0.1\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.ConfigurationExtensions.7.0.0\lib\net462\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.7.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.2\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.2\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Componentes\Busqueda\BusquedaComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\Busqueda\BusquedaComponent.Designer.cs">
+      <DependentUpon>BusquedaComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Busqueda\IBusquedaComponent.cs" />
+    <Compile Include="Componentes\CuadroReglaKernel\BloqueKernelComponent\BloqueKernelComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\CuadroReglaKernel\BloqueKernelComponent\BloqueKernelComponent.Designer.cs">
+      <DependentUpon>BloqueKernelComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\CuadroReglaKernel\IReglaKernelComponent.cs" />
+    <Compile Include="Componentes\CuadroReglaKernel\ReglaKernelComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\CuadroReglaKernel\ReglaKernelComponent.Designer.cs">
+      <DependentUpon>ReglaKernelComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Editor\EditorComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\Editor\EditorComponent.Designer.cs">
+      <DependentUpon>EditorComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Editor\IEditorComponent.cs" />
+    <Compile Include="Componentes\EliminarServidor\EliminarServidorComponente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\EliminarServidor\EliminarServidorComponente.Designer.cs">
+      <DependentUpon>EliminarServidorComponente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\GridReglas\GridReglasComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\GridReglas\IGridReglasComponent.cs" />
+    <Compile Include="Componentes\InfoMessage\IInfoMessage.cs" />
+    <Compile Include="Componentes\InfoMessage\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\InfoServer\IInfoServerForm.cs" />
+    <Compile Include="Componentes\InfoServer\InfoServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\InfoServer\InfoServerForm.Designer.cs">
+      <DependentUpon>InfoServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\SelectedReglas\ISelectedReglasComponent.cs" />
+    <Compile Include="Componentes\SelectedReglas\SelectedReglasComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IForm1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Actualizar\ActualizarReglaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Actualizar\ActualizarReglaForm.Designer.cs">
+      <DependentUpon>ActualizarReglaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Actualizar\IActualizaReglaForm.cs" />
+    <Compile Include="Vistas\Buscar\BuscarReglaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Buscar\BuscarReglaForm.Designer.cs">
+      <DependentUpon>BuscarReglaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Buscar\IBuscarReglaForm.cs" />
+    <Compile Include="Vistas\Buscar\ReglaKernelTree\ReglaTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Buscar\ReglaKernelTree\ReglaTreeForm.Designer.cs">
+      <DependentUpon>ReglaTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Crear\CrearReglaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Crear\CrearReglaForm.Designer.cs">
+      <DependentUpon>CrearReglaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Crear\EditarCuadroReglasKernel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Crear\EditarCuadroReglasKernel.Designer.cs">
+      <DependentUpon>EditarCuadroReglasKernel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Crear\ICrearReglaForm.cs" />
+    <Compile Include="Vistas\Crear\IJunior_Consola.cs" />
+    <Compile Include="Vistas\Crear\ISinior_Consola.cs" />
+    <Compile Include="Vistas\Servidor\Servidor_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Servidor\Servidor_Form.Designer.cs">
+      <DependentUpon>Servidor_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Servidor\IServidor_Form.cs" />
+    <Compile Include="Vistas\Eliminar\EliminarReglaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Eliminar\EliminarReglaForm.Designer.cs">
+      <DependentUpon>EliminarReglaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Eliminar\IEliminarReglaForm.cs" />
+    <Compile Include="Vistas\InicioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\InicioForm.Designer.cs">
+      <DependentUpon>InicioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\IInicioForm.cs" />
+    <Compile Include="Vistas\Crear\Junior_Consola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Crear\Junior_Consola.Designer.cs">
+      <DependentUpon>Junior_Consola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Crear\Sinior_Consola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Crear\Sinior_Consola.Designer.cs">
+      <DependentUpon>Sinior_Consola.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Componentes\Busqueda\BusquedaComponent.resx">
+      <DependentUpon>BusquedaComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\CuadroReglaKernel\BloqueKernelComponent\BloqueKernelComponent.resx">
+      <DependentUpon>BloqueKernelComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\CuadroReglaKernel\ReglaKernelComponent.resx">
+      <DependentUpon>ReglaKernelComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\Editor\EditorComponent.resx">
+      <DependentUpon>EditorComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\EliminarServidor\EliminarServidorComponente.resx">
+      <DependentUpon>EliminarServidorComponente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\GridReglas\GridReglasComponent.resx">
+      <DependentUpon>GridReglasComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\InfoMessage\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\InfoServer\InfoServerForm.resx">
+      <DependentUpon>InfoServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\SelectedReglas\SelectedReglasComponent.resx">
+      <DependentUpon>SelectedReglasComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vistas\Actualizar\ActualizarReglaForm.resx">
+      <DependentUpon>ActualizarReglaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Buscar\BuscarReglaForm.resx">
+      <DependentUpon>BuscarReglaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Buscar\ReglaKernelTree\ReglaTreeForm.resx">
+      <DependentUpon>ReglaTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Crear\CrearReglaForm.resx">
+      <DependentUpon>CrearReglaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Crear\EditarCuadroReglasKernel.resx">
+      <DependentUpon>EditarCuadroReglasKernel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Servidor\Servidor_Form.resx">
+      <DependentUpon>Servidor_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Eliminar\EliminarReglaForm.resx">
+      <DependentUpon>EliminarReglaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\InicioForm.resx">
+      <DependentUpon>InicioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Crear\Junior_Consola.resx">
+      <DependentUpon>Junior_Consola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Crear\Sinior_Consola.resx">
+      <DependentUpon>Sinior_Consola.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GDTKernel_Bussiness\GDTKernel_Bussiness.csproj">
+      <Project>{eec171f2-47d8-4ae4-9fab-49809b7e3f69}</Project>
+      <Name>GDTKernel_Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GDTKernel_DataAccess\GDTKernel_DataAccess.csproj">
+      <Project>{1c0a94a6-75e9-4cfe-b444-56af84fb5cdc}</Project>
+      <Name>GDTKernel_DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GDTKernel_Interprete\GDTKernel_Semantico.csproj">
+      <Project>{fd666034-da85-481d-93d9-fb46f1438fae}</Project>
+      <Name>GDTKernel_Semantico</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GDTKernel_Model\GDTKernel_Model.csproj">
+      <Project>{3BAD776C-5E20-4DC3-BA34-6B9EB54D4F23}</Project>
+      <Name>GDTKernel_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_elek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_bancAzteca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_italik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_presta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_presta1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_italik1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_bancAzteca1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conectado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desconectado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manualcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADNRedUnica.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

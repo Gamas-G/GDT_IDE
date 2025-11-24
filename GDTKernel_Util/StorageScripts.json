@@ -1,0 +1,33 @@
+[
+    {
+        "nombre": "default",
+        "modificar": false,
+        "scripts": [
+            {
+                "nombre": "IntPtr",
+                "descripcion": "Define intptr",
+                "codigo": "{\"e\":\"tuBloqu\",\"i\":0,\"param\":{\"n\":\"tunameptr\",\"v\":\"System.IntPtr\"}}"
+            },
+            {
+                "nombre": "Int32",
+                "descripcion": "Define Int",
+                "codigo": "{\"e\":\"tuBloqu\",\"i\":0,\"param\":{\"n\":\"tuname32\",\"v\":\"System.Int32\"}}"
+            },
+            {
+                "nombre": "Float",
+                "descripcion": "Define float",
+                "codigo": "{\"e\":\"tuBloqu\",\"i\":0,\"param\":{\"n\":\"tunamefloat\",\"v\":\"System.Single\"}}"
+            },
+            {
+                "nombre": "Font",
+                "descripcion": "Define font",
+                "codigo": "{\"e\":\"tuBloqu\",\"i\":0,\"param\":{\"n\":\"tunamefont\",\"v\":\"System.Drawing.Font\"}}"
+            },
+            {
+                "nombre": "Froms",
+                "descripcion": "Define Froms",
+                "codigo": "{\"e\":\"tuBloqu\",\"i\":0,\"param\":{\"n\":\"tunamefrom\",\"v\":\"System.Windows.Forms\"}}"
+            }
+        ]
+    }
+]
