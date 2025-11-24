@@ -7,11 +7,11 @@ Cada formulario fue tratado como un componente para la reutilización de estos h
 
 Configura tus servidores
 
-![ScreenShot](https://raw.github.com/Gamas-G/GDT_IDE/main/img/img1.png)
+![ScreenShot](https://raw.github.com/Gamas-G/GDT_IDE/main/img/img1.PNG)
 
 Validación de estrctura json
 
-![ScreenShot](https://raw.github.com/Gamas-G/GDT_IDE/main/img/img2.png)
+![ScreenShot](https://raw.github.com/Gamas-G/GDT_IDE/main/img/img2.PNG)
 
 Validador semantico
 
